@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Cac thanh phan co ban trong table
+    1. tr: hien thi bang
+    2. thead: phan dau
+        +  tr_th
+    3. tbody: phan than
+        +   tr_td
+    4. tfoot: phan cuoi cua bang
+    5. Caption: mo ta tieu de cua bang
+
+    Cac thuoc tinh(attribute) trong table
+    1. border: Tạo đường viền cho bảng
+    2. Cellpadding: Khoảng cách từ đường viền của ô đến nội dung
+    3. Cellspacing:Khoảng cách từ đường viền của bảng đến viền của ô
+    * Thuộc tính của thẻ td
+    1. align: căn chỉnh nội dung
+    2. bgcolor: chinh mau
+
+        -->
+    <table border="1" cellpadding="10" cellspacing = "10">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Tuổi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">1</td>
+                <td bgcolor="tomato">Nguyễn Văn A</td>
+                <td rowspan="2">25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguyễn Văn B</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nguyễn Văn C</td>
+                <td>27</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> 
+                <td colspan="3">Tổng sô sinh viên: 3</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
