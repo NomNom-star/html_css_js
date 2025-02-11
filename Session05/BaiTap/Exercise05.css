@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.text01{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+.col01{
+    width: 5px;
+    background-color: yellow;
+}
+.col02{
+    background-color: rgb(255, 255, 225);
+    font-size: 15px;
+    width: 750px;
+    height: 230px;
+    border-right: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.content01{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

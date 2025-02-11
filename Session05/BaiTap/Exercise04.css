@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.line-2{
+    opacity: 0.8;
+}
+.text{
+    padding-bottom: 85px ;
+    padding-left: 20px;
+}
