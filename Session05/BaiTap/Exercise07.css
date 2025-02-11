@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table, tr, td{
+    border: 1px solid white;
+    border-collapse: collapse;
+    height: 40px;
+}
+
+.table{
+    text-align: center;
+    height: 100px;
+    width: 1520px;
+    background-color: rgba(192, 192, 192, 0.299);
+    
+    
+}
+.body{
+    background-color: rgb(255, 255, 255);
+}
+.view{
+    
+    color: azure;
+    width: 70px;
+    height: 40px;
+    background-color:  rgb(20, 204, 20);
+    border: 0px;
+}
+.update{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(248, 214, 20);
+    border: 0px;
+}
+.delete{
+    background-color: red;
+    color: azure;
+    width: 70px;
+    height: 40px;
+    border: 0px;
+}
+
+.caption{
+    line-height: 30px;
+    background-color: rgba(175, 176, 176, 0.299);
+    font-weight: bold;
+    font-size: 30px;
+}
+.table02{
+    margin-left: 28%;
+}
+
+.thead{
+    background-color: rgb(22, 145, 246);
+    color: azure;
+}
