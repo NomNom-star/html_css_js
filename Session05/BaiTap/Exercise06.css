@@ -1,0 +1,37 @@
+
+.text-align{
+    background-color: rgb(238, 238, 238);
+    color: red;
+}
+.inside{
+    border-style: solid ;
+    text-align: center;
+    border-color: chartreuse;
+    height: 60px;
+    
+    
+}
+.all{
+    background-color: rgba(145, 187, 187, 0.118);
+}
+.body{
+    background-color: rgb(254, 254, 254);
+    border-left: 5px solid rgba(16, 182, 16, 0.995);
+}
+.center_word{
+color: brown;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.button{
+    background-color: rgb(65, 246, 140) ;
+    color: white;
+    height: 30px;
+    width: 120px;
+    border-radius: 6px;
+    border: 0px;
+}
