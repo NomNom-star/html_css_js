@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 370px;
+    text-align: center;
+    margin-left: 3px;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(115, 126, 141);
+    background-color: white;
+}
+.header h1{
+    color: rgb(193, 1, 1);
+    line-height: 38px;
+}
+.header p{
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgb(57, 57, 88);
+}
+table{
+    border: none;
+    background-color: rgb(230, 230, 230);
+    height: 250px;
+    margin-top: 20px;
+    width: 1550px;
+}

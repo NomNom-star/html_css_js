@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.all{
+    width: 600px;
+    height: 470px;
+    background-color:white;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+.all .caption{
+    height: 70px;
+    padding-top: 22px;
+    padding-left: 20px;
+    border-bottom: 1px solid gray;
+    position: relative;
+}
+.all .caption span{
+    position: absolute;
+    right: 20px;
+    color: rgb(176, 176, 176);
+}
+.all .content{
+    height: 280px;
+    border-bottom: 1px solid gray;
+}
+.all .content p{
+    margin: 20px;
+    font-size: 20px;
+}
+.all .content input{
+    margin-left: 20px;
+    width: 555px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.all .content textarea{
+    margin-left: 20px;
+    width: 555px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+.all .footer{
+    height: 100px;
+    position: relative;
+}
+.all .footer .send_button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+}
+.all .footer .close_button{
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+    background-color: gray;
+    border-radius: 10px;
+    border: none;
+
+}
