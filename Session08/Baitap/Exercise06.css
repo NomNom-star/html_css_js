@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 640px;
+    height: 80px;
+    background-color: gray;
+    padding-top: 10px;
+}
+.search-container {
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 24px;
+    padding: 10px;
+    width: 600px;
+    margin: 20px;
+    position: relative;
+    margin-top: 10px;
+    position: relative;
+}
+.container .search-container .magnifying-glass{
+    width: 30px;
+    height: 20px;
+    color: rgb(156, 156, 156);
+    margin-left: 10px
+}
+.search-container input {
+    border: none;
+    outline: none;
+    margin-left: 30px;
+    padding: 10px;
+    padding-left: 5px;
+    font-size: 16px;
+    width: 400px;
+    margin-top: 0px;
+    position: absolute;
+    top: 0px;
+}
+.search-container .lens {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+.search-container .micro {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 60px;
+    top: 8px;
+}

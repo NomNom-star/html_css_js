@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 600px;
+    height: 500px;
+    background-color: rgb(93, 73, 112);
+    margin: 20px;
+    position: relative;
+}
+.container .name{
+    width: 300px;
+    height: 150px;
+    padding-left: 40px;
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: white;
+    
+}
+.container .name input{
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: rgb(93, 73, 112);
+}
+.container .email{
+    width: 300px;
+    height: 150px;
+    padding-left: 15px;
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+}
+.container .email input{
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: rgb(93, 73, 112);
+}
+.container .message{
+    width: 600px;
+    height: 250px;
+    padding: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: white;
+}
+.container .message textarea{
+    width: 527px;
+    margin-top: 20px;
+    height: 140px;
+    border-radius: 10px;
+    border: 1px solid rgb(194, 194, 194);
+    background-color: rgb(93, 73, 112);
+}
+.container button{
+    margin-left: 40px;
+    width: 180px;
+    height: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+    letter-spacing:1.5px;
+}
