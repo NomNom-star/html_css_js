@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    background-color: rgb(201, 201, 201);
+    
+}
+.feature-work{
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+.feature-work .header{
+    margin-left: 100px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgb(21, 21, 48);
+}
+.work-item{
+    display: flex;
+    flex-direction: row;
+    height: 270px;
+    width: 900px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 90px;
+    border-bottom: 1px solid white;
+}
+.work-item .image-container img{
+    height: 200px;
+    width: 300px;
+    border-radius: 4px;
+}
+.work-detail{
+    width: 510px;
+    height: 200px;
+    margin-right: 30px; 
+    
+    
+}
+.work-detail .detail{
+    display: flex;
+    flex-direction: column;
+    
+}
+.detail p{
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.detail button{
+    border-radius: 20px;
+    width: 40px;
+    border: none;
+    color: white;
+    background-color: rgb(5, 30, 94);
+
+}
+.content{
+    word-spacing: 20px;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.credit{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 990px;
+}
+.credit .brand-container span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.brand-container i{
+    padding-right:30px;
+    padding-left: 15px;
+    font-size: 30px;
+}
+.brand-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.brand-container p{
+    margin-top: 35px;
+}

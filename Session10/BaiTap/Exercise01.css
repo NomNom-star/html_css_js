@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.navbar .logo {
+    margin-left: 80px;
+    font-size: 34px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.navbar .links {
+    display: flex;
+}
+
+.navbar .item {
+    margin: 0 15px;
+}
+.navbar .item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.search_button {
+    background-color: #727272;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 80px;
+}
