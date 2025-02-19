@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 20px;
+    width: 98%;
+    height: 900px;
+    border: 2px solid black;
+}
+.container .header{
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.container .header .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+.container .header .menu{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 130px;
+}
+.container .header .menu .line1{
+    background-color: white ;
+    width: 120px;
+    height: 1px;
+    margin-left: 700px;
+    margin-top: 20px;
+}
+.container .header .menu .line2{
+    background-color: white ;
+    width: 120px;
+    height: 1px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.container .header .menu .line3{
+    display: none;
+    background-color: white ;
+    width: 120px;
+    height: 1px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.container .header .menuButton{
+    display: none;
+    font-size: 25px;
+    color: white;
+    margin-top: 5px;
+    position: absolute;
+    right: 30px;
+}
+.container .main {
+    margin: 20px;
+    width: 97%;
+    height: 89%;
+}
+.container .main .row1{
+    height: 30%;
+    background-color: #A60162;
+    margin-bottom: 20px;
+}
+.container .main .row2{
+    height: 18%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container .main .row2 .cell{
+    width: 23.7%;
+    background-color: #DB317F;
+}
+.container .main .row3{
+    height: 30%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container .main .row3 .cell1{
+    background-color: #DE5D9E;
+    width: 49%;
+}
+.container .main .row3 .cell2{
+    background-color: #DE5D9E;
+    width: 49%;
+}
+.container .main .row4{
+    height: 140px;
+    background-color: #ED7BB8;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:1200px) {
+    .container .header .menu {
+        right: 20px;
+    }
+    .container .header .menu .line3{
+        display: block;
+    }
+    .container .main .row2{
+        height: 300px;
+        flex-wrap:wrap ;
+    }
+    .container .main .row2 .cell{
+        height: 46%;
+        width: 49%;
+    }
+    .container .main .row3 .cell1{
+        width: 100%;
+    }
+    .container .main .row3 .cell2{
+        display: none;
+    }
+    .container .main .row4{
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .container .header .menu{
+        display: none;
+    }
+    .container .header .menuButton{
+        display: block;
+    }
+    .container .main .row1{
+        height: 15%;
+        width: 98%;
+    }
+    .container .main .row2{
+        height: 70%;
+        margin-bottom: 7px;
+    }
+    .container .main .row2 .cell{
+        width: 98%;
+        height: 22.4%;
+        margin-bottom: 0px;
+        justify-content: space-evenly;
+    }
+    .container .main .row3 .cell1{
+        height: 47%;
+        width: 98%;
+    }
+}
