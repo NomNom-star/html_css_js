@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+}
+.container{
+    background-color: #F8F9FA;
+    width: 600px;
+    height: 490px;
+    padding-left: 40px;
+    padding-top: 10px ;
+    position: relative;
+}
+.form{
+    padding-left: 0px;
+    width: 550px;
+    position: absolute;
+    left: 24px;
+    border-bottom: 1px solid rgb(171, 171, 171);
+}
+.button{
+    height: 50px;
+    width:92.5%;
+    position: absolute;
+    bottom: 20px;
+    left: 20PX;
+}
+button{
+    width: 100%;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./Exercise08.css">
+</head>
+<body>
+    <div class="container"> 
+        <div class="header">
+            <h4>Payment</h4>
+            <div class="form-check form-check-reverse">
+                <input class="form-check-input" type="radio" name="check" value="" id="reverseCheck1">
+                <label class="form-check-label" for="reverseCheck1">
+                  Credit Card
+                </label>
+              </div>
+              <div class="form-check form-check-reverse">
+                <input class="form-check-input" type="radio" name="check" value="" id="reverseCheck2">
+                <label class="form-check-label" for="reverseCheck2">
+                Debit Card
+                </label>
+              </div>
+              <div class="form-check form-check-reverse">
+                <input class="form-check-input" type="radio" name="check" value="" id="reverseCheck3">
+                <label class="form-check-label" for="reverseCheck3">
+                  PayPal
+                </label>
+              </div>
+        </div>
+        <div class="form">
+            <form action="" class="d-flex flex-wrap">
+                <div class="mb-3 w-50 p-3">
+                    <label for="exampleInputEmail1" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Full name as displayed on card.</div>
+                  </div>
+                  <div class="mb-3 w-50 p-3">
+                    <label for="exampleInputEmail1" class="form-label">Credit on card</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <br> <br>
+                  <div class="mb-3 w-25 p-3">
+                    <label for="exampleInputEmail1" class="form-label">Expiration</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3 w-25 p-3">
+                    <label for="exampleInputEmail1" class="form-label">CVV</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+            </form>
+        </div>
+        <div class="button">
+            <button type="button" class="btn btn-primary">Continue to checkout</button>
+        </div>
+    </div>
+      
+</body>
+</html>
