@@ -6,7 +6,6 @@ for (let i = 0; i < 10; i++) {
     }
     arr.push(num);
 }
-
 if (arr.length === 0) {
     console.log("Không có số lớn nhất");
 } else {

@@ -1,5 +1,5 @@
 let arr = [];
-let choice
+let choice;
 do {
     console.log("1.Nhập vào mảng");
     console.log("2.Hiển thị mảng");
