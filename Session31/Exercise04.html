@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 300px;
+            padding-top: 30px;
+            padding-left: 10px;
+        }
+        .modal{
+            display: none;
+            background-color: white;
+            width: 600px;
+            height: 100px;
+            margin-left: 400px;
+            margin-top: 10px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .container .modal button{
+            background-color: white;
+            border: none;
+            font-size: 20px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .container .modal p {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Modal Example</h1>
+        <button id="btn">Open Modal</button>
+        <div class="modal">
+            <button id="close">X</button>
+            <p>Some text in the Modal</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", ()=>{
+            document.getElementsByClassName("modal")[0].style.display = "block";
+            document.getElementsByClassName("container")[0].style.background = "grey";
+        })
+        document.getElementById("close").addEventListener("click", ()=>{
+            document.getElementsByClassName("modal")[0].style.display = "none";
+            document.getElementsByClassName("container")[0].style.background = "white";
+        })
+    </script>
+</body>
+</html>

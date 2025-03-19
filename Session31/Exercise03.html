@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        .btn-container button{
+            width: 90px;
+            height: 100px;
+        }
+        .btn-container .green{
+            background-color: green;
+        }
+        .btn-container .red{
+            background-color:red;
+        }
+        .btn-container .purple{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>change background-color</p>
+        <p>Mouse click</p>
+        <div class="btn-container">
+            <button class="green">xanh</button>
+            <button class="red">đỏ</button>
+            <button class="purple">tím</button>
+        </div>
+    </div>
+    <script>
+        document.getElementsByClassName("green")[0].addEventListener("click", ()=>{
+            document.getElementsByClassName("container")[0].style.background = "green";
+        })
+        document.getElementsByClassName("red")[0].addEventListener("click", ()=>{
+            document.getElementsByClassName("container")[0].style.background = "red";
+        })
+        document.getElementsByClassName("purple")[0].addEventListener("click", ()=>{
+            document.getElementsByClassName("container")[0].style.background = "purple";
+        })
+    </script>
+</body>
+</html>
