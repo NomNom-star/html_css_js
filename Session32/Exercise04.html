@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 20px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input"> <br>
+    <div class="container">
+    </div>
+    <button id="btn">Check</button>
+    <script>
+        document.getElementById("btn").addEventListener("click", ()=>{
+            let email = document.getElementById("input").value.trim();
+            function checkEmail(email){
+                if (email.includes("@") && (email.endsWith(".com") || email.endsWith(".vn") )) {
+                    document.getElementsByClassName("container")[0].innerHTML = "<p>email hợp lệ!</p>";
+                    document.getElementsByClassName("container")[0].style.color = "green";
+                } else {
+                    document.getElementsByClassName("container")[0].innerHTML = "<p>email không hợp lệ!</p>";
+                    document.getElementsByClassName("container")[0].style.color = "red";
+                }
+            }
+            checkEmail(email);
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Exercise05.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List K24 PTIT</h1>
+        <div class="input">
+            <input type="text" placeholder="Nhập nhiệm vụ ..." id="myInput">
+            <button id="addBtn" class="add">Thêm</button>
+            <ul id="list">
+                
+            </ul>
+        </div>
+        <script>
+            let arr=["Học bài", "Chơi game"];
+            function renderList() {
+                let text = '';
+                for (let i = 0; i < arr.length; i++) {
+                    text += 
+                    `
+                    <li>${arr[i]} <span><button class="remove" onclick="removeItem(${i})">X</button></span></li>
+                    ` ;
+                }
+                document.getElementById("list").innerHTML=text;
+            }
+            document.getElementById("addBtn").addEventListener("click", ()=> {
+                let input = document.getElementById("myInput").value.trim();
+                document.getElementById("myInput").value = "";
+                if (input) {
+                    arr.push(input);
+                    input.value = "";
+                    renderList();
+                }
+            })
+            function removeItem(index) {
+                if (confirm("Bạn có chắc chắn muốn xóa nhiệm vụ này không?")) {
+                    arr.splice(index, 1);
+                    renderList();
+                }
+            }
+            renderList();
+        </script>
+    </div>
+</body>
+</html>

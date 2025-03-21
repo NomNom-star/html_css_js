@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhập tên môn học" id="myInput">
+    <button id="addBtn">Thêm môn học</button>
+    <ol id="list">
+        
+    </ol>
+    <script>
+        let arr=[];
+        function renderList() {
+            let text = '';
+            for (let i = 0; i < arr.length; i++) {
+                text += 
+                `
+                <li>${arr[i]}</li>
+                ` ;
+            }
+            document.getElementById("list").innerHTML=text;
+        }
+        document.getElementById("addBtn").addEventListener("click", ()=> {
+            let input = document.getElementById("myInput").value.trim();
+            document.getElementById("myInput").value = "";
+            if (input) {
+                arr.push(input);
+                input.value = "";
+                renderList();
+            } else {
+                alert("Tên môn học không được để trống");
+            }
+        })
+    </script>
+</body>
+</html>

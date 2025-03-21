@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="btn">Đổi màu nền</button>
+    </div>
+    <script>
+        let color;
+        function getRandomColor() {
+            let x = Math.floor(Math.random() * 256);
+            let y = Math.floor(Math.random() * 256);
+            let z = Math.floor(Math.random() * 256);
+            let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+            return bgColor
+        }
+        document.getElementById("btn").addEventListener("click", ()=>{
+            document.getElementsByClassName("container")[0].style.background = getRandomColor();
+        });
+    </script>
+</body>
+</html>

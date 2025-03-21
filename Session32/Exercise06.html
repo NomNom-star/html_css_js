@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 400px;
+            background-color: rgb(219, 219, 219);
+            text-align: center;
+            padding-top: 30px;
+        }
+        .container .add{
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            font-size: 20px;
+            margin: 10px;
+        }
+        .container .minus{
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="content">Chữ sẽ thay đổi kích thước khi bấm nút</p>
+        <button class="add">+</button>
+        <button class="minus">-</button>
+    </div>
+    <script>
+        let currentSize =30;
+        document.getElementsByClassName("content")[0].style.fontSize = `${currentSize}px`
+        document.getElementsByClassName("add")[0].addEventListener("click",()=>{
+            currentSize ++;
+             document.getElementsByClassName("content")[0].style.fontSize = `${currentSize}px`
+        })
+        document.getElementsByClassName("minus")[0].addEventListener("click",()=>{
+            currentSize --;
+             document.getElementsByClassName("content")[0].style.fontSize = `${currentSize}px`
+        })
+    </script>
+</body>
+</html>
