@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="selectCat">
+        <option value="all">Lựa chọn danh mục</option>
+        <option value="Đồ ăn">Đồ ăn</option>
+        <option value="Nước">Nước</option>
+        <option value="Dụng cụ">Dụng cụ</option>
+    </select>
+    <button id="btn" onclick="choiceCat()">Lọc</button>
+    <ul id="list">
+    </ul>
+    <script>
+        let dish = [
+            {name: 'Rau sạch', category: 'Đồ ăn'},
+            {name: 'Thịt lợn', category: 'Đồ ăn'},
+            {name: 'Pepsi Không calo', category: 'Nước'},
+            {name: 'CocaCola', category: 'Nước'},
+            {name: 'Cờ lê', category: 'Dụng cụ'},
+            {name: 'Tua vít', category: 'Dụng cụ'},
+        ]
+        function choiceCat(){
+            let choice = document.getElementById("selectCat").value;
+            let text = '';
+            for (let i = 0; i < dish.length; i++) {
+                if (choice == dish[i].category) {
+                    text += 
+                    `
+                    <li><b>Tên đồ:</b> ${dish[i].name} - <b>Danh mục:</b> ${dish[i].category}</li>
+                    `;
+                }
+                document.getElementById("list").innerHTML = text;
+            }
+            
+        }
+    </script>
+</body>
+</html>
