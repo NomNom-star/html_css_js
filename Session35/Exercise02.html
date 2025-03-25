@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c2c54;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #474787;
+            border-radius: 10px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .bookmark-list {
+            margin-top: 20px;
+        }
+        .bookmark {
+            background: #706fd3;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .bookmark a {
+            color: white;
+            text-decoration: none;
+        }
+        .delete-btn {
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #474787;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        .popup .close-btn {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            background-color: none;
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bookmark Manager</h1>
+        <button id="show-form-btn">Add Bookmark</button>
+    </div>
+
+    <div id="bookmark-popup" class="popup">
+        <button class="close-btn">X</button>
+        <form id="bookmark-form">
+            <input type="text" id="website-name" placeholder="Website Name" required>
+            <input type="url" id="website-url" placeholder="Website URL" required>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+    <div id="bookmark-list" class="bookmark-list"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bookmarkPopup = document.getElementById('bookmark-popup');
+            const bookmarkForm = document.getElementById('bookmark-form');
+            const bookmarkList = document.getElementById('bookmark-list');
+            const showFormBtn = document.getElementById('show-form-btn');
+            const closeBtn = document.querySelector('.close-btn');
+
+            showFormBtn.addEventListener('click', () => {
+                bookmarkPopup.style.display = 'block';
+            });
+
+            closeBtn.addEventListener('click', () => {
+                bookmarkPopup.style.display = 'none';
+            });
+
+            function getBookmarks() {
+                return JSON.parse(localStorage.getItem('bookmarks')) || [];
+            }
+
+            function saveBookmarks(bookmarks) {
+                localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+            }
+
+            function renderBookmarks() {
+                bookmarkList.innerHTML = '';
+                const bookmarks = getBookmarks();
+                bookmarks.forEach((bookmark, index) => {
+                    const div = document.createElement('div');
+                    div.classList.add('bookmark');
+                    div.innerHTML = `
+                        <a href="${bookmark.url}" target="_blank">${bookmark.name}</a>
+                        <button class="delete-btn" data-index="${index}">X</button>
+                    `;
+                    bookmarkList.appendChild(div);
+                });
+            }
+
+            bookmarkForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('website-name').value.trim();
+                const url = document.getElementById('website-url').value.trim();
+                if (name && url) {
+                    const bookmarks = getBookmarks();
+                    bookmarks.push({ name, url });
+                    saveBookmarks(bookmarks);
+                    renderBookmarks();
+                    bookmarkForm.reset();
+                    bookmarkPopup.style.display = 'none';
+                }
+            });
+
+            bookmarkList.addEventListener('click', (e) => {
+                if (e.target.classList.contains('delete-btn')) {
+                    const index = e.target.getAttribute('data-index');
+                    const bookmarks = getBookmarks();
+                    bookmarks.splice(index, 1);
+                    saveBookmarks(bookmarks);
+                    renderBookmarks();
+                }
+            });
+
+            renderBookmarks();
+        });
+    </script>
+</body>
+</html>
+

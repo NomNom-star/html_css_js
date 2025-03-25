@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="./Exercise05.css">
+</head>
+<body>
+    <h2>Danh mục</h2>
+    <button class="btn-primary" onclick="openModal()">Thêm mới danh mục</button>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Mã danh mục</th>
+                <th>Tên danh mục</th>
+                <th>Trạng thái</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody id="category-list"></tbody>
+    </table>
+    
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Thêm mới danh mục</h3>
+                <button onclick="closeModal()">X</button>
+            </div>
+            <div class="modal-body">
+                <label for="category-code">Mã danh mục:</label>
+                <input type="text" id="category-code">
+                <label for="category-name">Tên danh mục:</label>
+                <input type="text" id="category-name">
+                <label>Trạng thái:</label>
+                <input type="radio" id="category-status-active" name="category-status" checked> Đang hoạt động
+                <input type="radio" id="category-status-inactive" name="category-status"> Ngừng hoạt động
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()">Hủy</button>
+                <button class="btn-primary" onclick="addCategory()">Thêm</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./Exercise05.js"></script>
+</body>
+</html>
