@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 300px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container button{
+            width: 60px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            margin: 15px;
+        }
+        .container .red{
+            background-color: red;
+            color: white;
+        }
+        .container .blue{
+            background-color: blue;
+            color: white;
+        }
+        .container .yellow{
+            background-color: yellow;
+        }
+        .container .purple{
+            background-color: purple;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chọn màu nền bạn thích</h1>
+        <button class="red" onclick="changeColor('red')">Đỏ</button>
+        <button class="blue" onclick="changeColor('blue')">Xanh</button>
+        <button class="yellow" onclick="changeColor('yellow')">Vàng</button>
+        <button class="purple" onclick="changeColor('purple')">Tím</button>
+        <p>Trang sẽ ghi nhớ màu bạn đã chọn kể cả khi tải lại</p>
+    </div>
+    <script>
+        function changeColor(color){
+            document.getElementsByClassName("container")[0].style.background = color;
+            localStorage.setItem("color", color);
+        }
+        function setColor(){
+            let color = localStorage.getItem("color");
+            document.getElementsByClassName("container")[0].style.background = color;
+        }
+        setColor();
+    </script>
+</body>
+</html>

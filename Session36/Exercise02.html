@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            margin-left: 560px;
+        }
+        .container{
+            height: 800px;
+            text-align: center;
+            background-color: rgb(197, 197, 197);
+        }
+        .container .cell{
+            width: 460px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            margin-left: 500px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .container .cell img{
+            width: 220px;
+            padding-right: 50px;
+            
+        }
+        .container .cell button{
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            width: 80px;
+            height: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Bạn thích món nào nhất 🍵</h1>
+    <div class="container">
+        
+        <!-- <div class="cell">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bun-Bo-Hue-from-Huong-Giang-2011.jpg/1200px-Bun-Bo-Hue-from-Huong-Giang-2011.jpg" alt="">
+            <div class="content">
+                <h2>Bún bò Huế</h2>
+                <p>❤️ 0 lượt thích</p>
+                <button>Thích +1</button>
+            </div>
+        </div>
+        <div class="cell">
+            <img src="https://static.vinwonders.com/production/pho-bo-ha-noi.jpeg" alt="">
+            <div class="content">
+                <h2>Phở bò Hà Nội</h2>
+                <p>❤️ 0 lượt thích</p>
+                <button>Thích +1</button>
+            </div>
+        </div>
+        <div class="cell">
+            <img src="https://static.vinwonders.com/production/com-tam-sai-gon-thumb.jpg" alt="">
+            <div class="content">
+                <h2>Cơm tấm Sài Gòn</h2>
+                <p>❤️ 0 lượt thích</p>
+                <button>Thích +1</button>
+            </div>
+        </div> -->
+    </div>
+    <script>
+        let dish = JSON.parse(localStorage.getItem("dish"));
+        function renderList() { 
+            let str = "";
+            for (let i = 0; i < dish.length; i++) {
+                str += 
+                `
+                   <div class="cell">
+                        <img src="${dish[i].image}" alt="">
+                        <div class="content">
+                            <h2>${dish[i].name} </h2>
+                            <p>❤️ ${dish[i].like} lượt thích</p>
+                            <button onclick="increaseLike(${i})">Thích +1</button>
+                        </div>
+                    </div> 
+                `
+            }
+            document.getElementsByClassName("container")[0].innerHTML=str;
+        }
+        renderList();
+        function increaseLike(index){
+            dish[index].like = dish[index].like + 1;
+            localStorage.setItem("dish", JSON.stringify(dish));
+            renderList();
+        }
+    </script>
+</body>
+</html>
